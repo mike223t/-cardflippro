@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090b16" />
+  <meta name="description" content="CardFlipPro - tap, flip, and discover collectible cards." />
+  <title>CardFlipPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="CardFlipPro home"><span>CF</span> CardFlipPro</a>
+    <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="menu">
+      <a href="#cards">Cards</a>
+      <a href="#how">How it works</a>
+      <a class="nav-cta" href="#cards">Start flipping</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">THE COLLECTION IS LIVE</div>
+      <h1>Every card has <span>another side.</span></h1>
+      <p>Discover collectible cards, tap to reveal their stories, and find your next favorite.</p>
+      <a class="primary-button" href="#cards">Explore the cards <span>→</span></a>
+      <div class="stats" aria-label="Collection statistics">
+        <div><strong>12K+</strong><small>Collectors</small></div>
+        <div><strong>450+</strong><small>Cards</small></div>
+        <div><strong>4.9</strong><small>Rating</small></div>
+      </div>
+    </section>
+
+    <section class="showcase" id="cards">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FEATURED</span>
+          <h2>Tap a card to flip it</h2>
+        </div>
+        <p>Each card hides details on the back.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="flip-card" tabindex="0" role="button" aria-label="Flip Neon Ace card">
+          <div class="flip-inner">
+            <div class="card-face front card-one">
+              <span class="rarity">LEGENDARY</span>
+              <div class="symbol">A</div>
+              <div><h3>Neon Ace</h3><p>Series 01 · #001</p></div>
+            </div>
+            <div class="card-face back">
+              <span class="rarity">CARD STORY</span>
+              <h3>Neon Ace</h3>
+              <p>The first card in the CardFlipPro collection - built for players who make the opening move.</p>
+              <strong>Power 98</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" role="button" aria-label="Flip Solar King card">
+          <div class="flip-inner">
+            <div class="card-face front card-two">
+              <span class="rarity">EPIC</span>
+              <div class="symbol">K</div>
+              <div><h3>Solar King</h3><p>Series 01 · #014</p></div>
+            </div>
+            <div class="card-face back">
+              <span class="rarity">CARD STORY</span>
+              <h3>Solar King</h3>
+              <p>Charged by daylight and designed to dominate the center of every collection.</p>
+              <strong>Power 94</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card" tabindex="0" role="button" aria-label="Flip Lunar Queen card">
+          <div class="flip-inner">
+            <div class="card-face front card-three">
+              <span class="rarity">RARE</span>
+              <div class="symbol">Q</div>
+              <div><h3>Lunar Queen</h3><p>Series 01 · #027</p></div>
+            </div>
+            <div class="card-face back">
+              <span class="rarity">CARD STORY</span>
+              <h3>Lunar Queen</h3>
+              <p>A quiet force with a rare finish that changes as the light moves across it.</p>
+              <strong>Power 91</strong>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>Collecting made simple</h2>
+      <div class="steps">
+        <div><b>01</b><h3>Discover</h3><p>Browse new drops and timeless favorites.</p></div>
+        <div><b>02</b><h3>Flip</h3><p>Tap each card to reveal its story and stats.</p></div>
+        <div><b>03</b><h3>Collect</h3><p>Build a collection that feels like yours.</p></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <p>YOUR NEXT FAVORITE IS WAITING</p>
+      <h2>Ready to flip?</h2>
+      <a class="primary-button light" href="#cards">View the collection →</a>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><span>CF</span> CardFlipPro</a><p>Made for collectors.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
