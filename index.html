@@ -3,116 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#090b16" />
-  <meta name="description" content="CardFlipPro - tap, flip, and discover collectible cards." />
-  <title>CardFlipPro</title>
+  <meta name="theme-color" content="#08111f" />
+  <meta name="description" content="PokyFlip helps Pokémon card collectors find deals, estimate profit, and sell cards." />
+  <title>PokyFlip — Pokémon Card Deals</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#top" aria-label="CardFlipPro home"><span>CF</span> CardFlipPro</a>
+    <a class="brand" href="#top"><span>PF</span> PokyFlip</a>
     <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav id="menu">
-      <a href="#cards">Cards</a>
-      <a href="#how">How it works</a>
-      <a class="nav-cta" href="#cards">Start flipping</a>
+      <a href="#deals">Deals</a>
+      <a href="#calculator">Profit Calculator</a>
+      <a href="#sell">Sell Cards</a>
+      <a class="nav-cta" href="#deals">Find a deal</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="eyebrow">THE COLLECTION IS LIVE</div>
-      <h1>Every card has <span>another side.</span></h1>
-      <p>Discover collectible cards, tap to reveal their stories, and find your next favorite.</p>
-      <a class="primary-button" href="#cards">Explore the cards <span>→</span></a>
-      <div class="stats" aria-label="Collection statistics">
-        <div><strong>12K+</strong><small>Collectors</small></div>
-        <div><strong>450+</strong><small>Cards</small></div>
-        <div><strong>4.9</strong><small>Rating</small></div>
+      <div class="eyebrow">BUY SMART · FLIP SMART · COLLECT</div>
+      <h1>Find Pokémon cards worth <span>flipping.</span></h1>
+      <p>Compare card prices, spot potential deals, and calculate your profit before you buy.</p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#deals">Browse deals <span>→</span></a>
+        <a class="secondary-button" href="#calculator">Calculate profit</a>
+      </div>
+      <div class="stats" aria-label="PokyFlip features">
+        <div><strong>Deal</strong><small>Finder</small></div>
+        <div><strong>Profit</strong><small>Calculator</small></div>
+        <div><strong>Sell</strong><small>Your cards</small></div>
       </div>
     </section>
 
-    <section class="showcase" id="cards">
+    <section class="finder" id="deals">
       <div class="section-heading">
-        <div>
-          <span class="eyebrow">FEATURED</span>
-          <h2>Tap a card to flip it</h2>
-        </div>
-        <p>Each card hides details on the back.</p>
+        <div><span class="eyebrow">DEAL FINDER</span><h2>Popular Pokémon cards</h2></div>
+        <p>Sample prices are starting estimates, not live market quotes.</p>
       </div>
+      <label class="search"><span>⌕</span><input id="cardSearch" type="search" placeholder="Search Charizard, Pikachu, Umbreon..." autocomplete="off" /></label>
+      <div class="card-grid" id="cardGrid"></div>
+      <p class="empty" id="emptyState" hidden>No cards matched that search.</p>
+    </section>
 
-      <div class="card-grid">
-        <article class="flip-card" tabindex="0" role="button" aria-label="Flip Neon Ace card">
-          <div class="flip-inner">
-            <div class="card-face front card-one">
-              <span class="rarity">LEGENDARY</span>
-              <div class="symbol">A</div>
-              <div><h3>Neon Ace</h3><p>Series 01 · #001</p></div>
-            </div>
-            <div class="card-face back">
-              <span class="rarity">CARD STORY</span>
-              <h3>Neon Ace</h3>
-              <p>The first card in the CardFlipPro collection - built for players who make the opening move.</p>
-              <strong>Power 98</strong>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card" tabindex="0" role="button" aria-label="Flip Solar King card">
-          <div class="flip-inner">
-            <div class="card-face front card-two">
-              <span class="rarity">EPIC</span>
-              <div class="symbol">K</div>
-              <div><h3>Solar King</h3><p>Series 01 · #014</p></div>
-            </div>
-            <div class="card-face back">
-              <span class="rarity">CARD STORY</span>
-              <h3>Solar King</h3>
-              <p>Charged by daylight and designed to dominate the center of every collection.</p>
-              <strong>Power 94</strong>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card" tabindex="0" role="button" aria-label="Flip Lunar Queen card">
-          <div class="flip-inner">
-            <div class="card-face front card-three">
-              <span class="rarity">RARE</span>
-              <div class="symbol">Q</div>
-              <div><h3>Lunar Queen</h3><p>Series 01 · #027</p></div>
-            </div>
-            <div class="card-face back">
-              <span class="rarity">CARD STORY</span>
-              <h3>Lunar Queen</h3>
-              <p>A quiet force with a rare finish that changes as the light moves across it.</p>
-              <strong>Power 91</strong>
-            </div>
-          </div>
-        </article>
+    <section class="calculator" id="calculator">
+      <div class="calc-copy">
+        <span class="eyebrow">FLIP CALCULATOR</span>
+        <h2>Know your profit before you buy.</h2>
+        <p>Enter what you pay and what you expect to sell for. The calculator includes a simple marketplace-fee estimate and shipping.</p>
+      </div>
+      <div class="calc-box">
+        <label>Buy price ($)<input id="buyPrice" type="number" min="0" step="0.01" value="40" /></label>
+        <label>Expected sale price ($)<input id="salePrice" type="number" min="0" step="0.01" value="70" /></label>
+        <label>Marketplace fee (%)<input id="feeRate" type="number" min="0" max="100" step="0.1" value="13" /></label>
+        <label>Shipping/packing ($)<input id="shipping" type="number" min="0" step="0.01" value="5" /></label>
+        <div class="profit-result"><small>Estimated profit</small><strong id="profit">$15.90</strong><span id="margin">22.7% margin</span></div>
+        <p class="fine-print">Estimate only. Actual fees, shipping, taxes, grading, and card condition can change your result.</p>
       </div>
     </section>
 
-    <section class="how" id="how">
-      <span class="eyebrow">HOW IT WORKS</span>
-      <h2>Collecting made simple</h2>
-      <div class="steps">
-        <div><b>01</b><h3>Discover</h3><p>Browse new drops and timeless favorites.</p></div>
-        <div><b>02</b><h3>Flip</h3><p>Tap each card to reveal its story and stats.</p></div>
-        <div><b>03</b><h3>Collect</h3><p>Build a collection that feels like yours.</p></div>
+    <section class="sell" id="sell">
+      <div>
+        <span class="eyebrow">SELL YOUR CARDS</span>
+        <h2>Turn cards you already own into cash.</h2>
+        <p>Use PokyFlip as your starting point: identify a card, estimate its value, calculate your target profit, then list it on your preferred marketplace.</p>
+      </div>
+      <div class="sell-steps">
+        <div><b>01</b><h3>Check the card</h3><p>Look up the set, number, rarity and condition.</p></div>
+        <div><b>02</b><h3>Set your price</h3><p>Use recent comparable sales rather than guessing.</p></div>
+        <div><b>03</b><h3>List & ship</h3><p>Take clear photos and protect the card during shipping.</p></div>
       </div>
     </section>
 
-    <section class="cta">
-      <p>YOUR NEXT FAVORITE IS WAITING</p>
-      <h2>Ready to flip?</h2>
-      <a class="primary-button light" href="#cards">View the collection →</a>
+    <section class="notice">
+      <span>💡</span><div><strong>How PokyFlip can make money</strong><p>The site can earn through referral/affiliate links, sponsored listings, seller leads, or a future transaction fee. Those revenue streams require the appropriate accounts and agreements; this version is the foundation for them.</p></div>
     </section>
   </main>
 
-  <footer><a class="brand" href="#top"><span>CF</span> CardFlipPro</a><p>Made for collectors.</p></footer>
+  <footer><a class="brand" href="#top"><span>PF</span> PokyFlip</a><p>Built for Pokémon collectors and card flippers.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
